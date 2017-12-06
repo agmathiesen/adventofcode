@@ -1,15 +1,18 @@
-with open('input.txt', 'r') as f:
-    inp = ''.join(f.readlines()).strip()
-    count = 0
-    for i in range(len(inp)-1):
-        c0 = int(inp[i])
-        c1 = int(inp[i+1])
+with open('input1.txt', 'r') as f:
+    numbers = [int(i) for i in ''.join(f.readlines()).strip()]
+    count1 = 0
+    count2 = 0
+    for i in range(len(numbers)):
+        c0 = numbers[i]
+        c1 = numbers[(i+1) % len(numbers)]
+        c2 = numbers[(i+ (len(numbers)//2)) % len(numbers)]
         if (c0 == c1):
-            count += c0
-    if (int(inp[0]) == int(inp[-1])):
-        count += int(inp[0])
+            count1 += c0
+        if (c0 == c2):
+            count2 += c0
 
-print(count)
+print(count1)
+print(count2)
                 
         
 f.close()
