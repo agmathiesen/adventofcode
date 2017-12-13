@@ -1,6 +1,6 @@
 import math
 
-index = int(input("Enter index:\n")) # Index given in assignment
+index = int(input("Enter index: ")) # Index given in assignment
 
 # Find dimensions of minimum oddnumbered n*n matrix (needs a center element)
 dim = math.ceil(math.sqrt(index))
